@@ -2,3 +2,4 @@ dconf/
 pulse/
 VSCodium/
 btop/btop.log
+nvim/lazy-lock.json
