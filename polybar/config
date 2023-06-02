@@ -1,24 +1,7 @@
-;==========================================================
-;
-;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/polybar/polybar
-;
-;   The README contains a lot of information
-;
-;==========================================================
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #1B1A25 
+background = #1B1A254D
 background-alt = #bf1e1e1e
 ;foreground = ${xrdb:color7:#222}
 foreground = #ffffff
@@ -66,21 +49,8 @@ modules-right = spotify pacman-updates filesystem memory cpu wlan eth pulseaudio
 separator = |
 tray-position = none
 tray-padding = 1
-;tray-background = #0063ff
 
-;wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-/wcursor-click = pointer
-eursor-scroll = ns-resize
+wcursor-click = pointer
 
 [module/pacman-updates]
 type = custom/script
