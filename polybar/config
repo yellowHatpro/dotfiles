@@ -68,7 +68,7 @@ format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-prefix = " "
 label-warn = "X"
-format-prefix-foreground = #89B4F5
+format-prefix-foreground = #CBA6F7 
 # format-prefix-background = #ffbb00
 
 [module/xwindow]
@@ -103,7 +103,9 @@ label-indicator-underline = ${colors.secondary}
 type = internal/fs
 interval = 25
 mount-0 = /home
-label-mounted ="  %used% of %total%" 
+format-mounted-prefix = " "
+format-mounted-prefix-foreground = #F9E2AF
+label-mounted ="%used%/%total%" 
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -216,7 +218,7 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 format-prefix = "󰻠"
-format-prefix-foreground = #89B4F5
+format-prefix-foreground = #94E2D5
 format-underline =
 label = %percentage:2%%
 
@@ -283,9 +285,10 @@ label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
-
+format-volume-prefix = " "
+format-volume-prefix-foreground = "#A6E3A1"
 format-volume = <label-volume> <bar-volume>
-label-volume = 󰽴 %percentage%%
+label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 
 label-muted = 󰎊 muted
@@ -391,7 +394,7 @@ label-warn-foreground = ${colors.secondary}
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 󱤋
-ramp-foreground =  #89B4F5
+ramp-foreground =  #F5C2E7
 
 [module/powermenu]
 type = custom/menu
@@ -401,7 +404,7 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = ${colors.secondary}
+label-open-foreground = #F38BA8
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
