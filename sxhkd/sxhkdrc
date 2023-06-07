@@ -9,13 +9,19 @@ super + Return
 ctrl + Return
   alacritty
 
+super + shift + e
+  rofi -modi emoji -show emoji
+
+super + q 
+  sh $HOME/custom/scripts/rofi-wifi/rofi-wifi-menu.sh
+
 # show help
 super + slash
     sh $HOME/.config/rofi/bin/sxhkd-help
 
 # Show clipmenu
 alt + v
-    CM_LAUNCHER=rofi clipmenu \
+    CM_LAUNCHER=rofi calc \
         -location 1 \
         -m -3 \  
         -theme-str '* \{ font: 10px; \}' \
@@ -84,6 +90,9 @@ super + {_,shift + }{h,j,k,l}
 # focus the node for the given path jump
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
+
+alt + Tab
+  bspc node -f @brother
 
 # focus the next/previous window in the current desktop
 super + {_,shift + }c
