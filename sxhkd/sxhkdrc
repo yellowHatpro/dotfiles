@@ -19,6 +19,9 @@ super + q
 super + slash
     sh $HOME/.config/rofi/bin/sxhkd-help
 
+# show calc
+ctrl + shift + c 
+    rofi -show calc
 # Show clipmenu
 alt + v
     CM_LAUNCHER=rofi calc \
