@@ -20,7 +20,7 @@ super + slash
     sh $HOME/.config/rofi/bin/sxhkd-help
 
 # show calc
-ctrl + shift + c 
+ctrl + super + c 
     rofi -show calc
 # Show clipmenu
 alt + v
