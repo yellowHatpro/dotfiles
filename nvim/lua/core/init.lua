@@ -8,6 +8,9 @@ g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 g.toggle_theme_icon = "   "
 g.transparency = config.ui.transparency
 
+-------------------------------------- custom ------------------------------------------
+
+
 -------------------------------------- options ------------------------------------------
 opt.laststatus = 3 -- global statusline
 opt.showmode = false
@@ -68,6 +71,14 @@ autocmd("FileType", {
   pattern = "qf",
   callback = function()
     vim.opt_local.buflisted = false
+  end,
+})
+
+autocmd("BufRead", {
+  group = vim.api.nvim_create_augroup("CmpSourceCargo", { clear = true }),
+  pattern = "Cargo.toml",
+  callback = function ()
+    require("cmp").setup.buffer({ sources = { { name = "crates" } } })  
   end,
 })
 

@@ -45,7 +45,7 @@ font-6 = Symbols Nerd Font:pixelsize=16;2
 
 modules-left =arch bspwm
 modules-center = xwindow
-modules-right = spotify pacman-updates filesystem memory cpu wlan eth pulseaudio temperature battery date  powermenu
+modules-right = spotify filesystem wlan eth pulseaudio battery date  powermenu
 
 separator = |
 tray-position = none
@@ -287,7 +287,7 @@ label = %date% %time%
 type = internal/pulseaudio
 format-volume-prefix = " "
 format-volume-prefix-foreground = "#A6E3A1"
-format-volume = <label-volume> <bar-volume>
+format-volume = <label-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${root.foreground}
 

@@ -5,6 +5,7 @@ local plugins = {
 
   -- Override plugin definition options
   {
+    
     {"wakatime/vim-wakatime", 
       lazy = false
     },

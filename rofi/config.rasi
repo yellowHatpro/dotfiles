@@ -1,7 +1,7 @@
 configuration{
-    modi: "run,drun";
+    modi: "run,drun,window";
     lines: 5;
-    font: "Sarasa Nerd Font 14";
+    font: "JetBrainsMono Nerd Font 14";
     show-icons: true;
     icon-theme: "Oranchelo";
     terminal: "st";
@@ -9,12 +9,14 @@ configuration{
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
-    display-drun: " 󰲉  Apps ";
+    display-drun: "   Apps ";
     display-run: "   Run ";
+    display-window: " 﩯  window";
+    display-Network: " 󰤨  Network";
     sidebar-mode: true;
 }
 
-@import "colors.rasi"
+@theme "catppuccin"
 
 element-text, element-icon , mode-switcher {
     background-color: inherit;
@@ -23,19 +25,18 @@ element-text, element-icon , mode-switcher {
 
 window {
     height: 360px;
-    width: 700px;
     border: 3px;
-    border-color: @black;
-    background-color: @background;
+    border-color: @border-col;
+    background-color: @bg-col;
 }
 
 mainbox {
-    background-color: @background;
+    background-color: @bg-col;
 }
 
 inputbar {
     children: [prompt,entry];
-    background-color: @background;
+    background-color: @bg-col;
     border-radius: 5px;
     padding: 2px;
 }
@@ -43,7 +44,7 @@ inputbar {
 prompt {
     background-color: @blue;
     padding: 6px;
-    text-color: @background;
+    text-color: @bg-col;
     border-radius: 3px;
     margin: 20px 0px 0px 20px;
 }
@@ -56,8 +57,8 @@ textbox-prompt-colon {
 entry {
     padding: 6px;
     margin: 20px 0px 0px 10px;
-    text-color: @foreground;
-    background-color: @background;
+    text-color: @fg-col;
+    background-color: @bg-col;
 }
 
 listview {
@@ -65,13 +66,13 @@ listview {
     padding: 6px 0px 0px;
     margin: 10px 0px 0px 20px;
     columns: 2;
-    background-color: @background;
+    background-color: @bg-col;
 }
 
 element {
     padding: 5px;
-    background-color: @background;
-    text-color: @foreground  ;
+    background-color: @bg-col;
+    text-color: @fg-col  ;
 }
 
 element-icon {
@@ -79,8 +80,8 @@ element-icon {
 }
 
 element selected {
-    background-color:  @selected;
-    text-color: @background;
+    background-color:  @selected-col ;
+    text-color: @fg-col2  ;
 }
 
 mode-switcher {
@@ -89,15 +90,13 @@ mode-switcher {
 
 button {
     padding: 10px;
-    background-color: @black-darker;
-    text-color: @white;
+    background-color: @bg-col-light;
+    text-color: @grey;
     vertical-align: 0.5; 
     horizontal-align: 0.5;
 }
 
 button selected {
-  border: 1px;
-  border-color: @blue;
-  background-color: @background;
+  background-color: @bg-col;
   text-color: @blue;
 }

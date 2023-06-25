@@ -37,7 +37,7 @@ super + @space
 	sh $HOME/.config/rofi/bin/screenshot
 
 ctrl + @space
-  sh $HOME/.config/rofi/bin/launcher
+  rofi -show drun
 
 alt + {_,shift + }<F4>
   bspc node -{c,k}

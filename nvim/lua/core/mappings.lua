@@ -16,6 +16,8 @@ M.general = {
   },
 
   n = {
+    -- diagnostics
+    ["<leader>do"] = { "<cmd> lua vim.diagnostic.open_float()<CR>", opts =  { noremap = true }},
     ["<Esc>"] = { ":noh <CR>", "Clear highlights" },
     -- switch between windows
     ["<C-h>"] = { "<C-w>h", "Window left" },
