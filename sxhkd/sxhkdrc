@@ -2,42 +2,67 @@
 # wm independent hotkeys
 #
 
+# Function keys
+
+F2
+  brightnessctl set 40-
+
+F3
+  brightnessctl set +40
+
+## super commands
+
 # terminal emulator
 super + Return
 	firefox	
 
+# rofi-wifi
+super + q 
+  sh $HOME/.config/rofi/rofi-wifi-menu.sh
+
+# rofi-bluetooth
+super + e
+  rofi-bluetooth
+
+
+## ctrl commands
+
 ctrl + Return
   alacritty
 
-super + shift + e
-  rofi -modi emoji -show emoji
+ctrl + space
+  rofi -show drun
 
-super + q 
-  sh $HOME/custom/scripts/rofi-wifi/rofi-wifi-menu.sh
-
-# show help
-super + slash
-    sh $HOME/.config/rofi/bin/sxhkd-help
+## ctrl + super
 
 # show calc
-ctrl + super + c 
-    rofi -show calc
-# Show clipmenu
+ctrl + super + c
+  rofi -show calc
+
+
+##  ctrl + shift commands
+
+# show help
+ctrl + shift + h
+  sh $HOME/.config/rofi/sxhkd-help
+
+# show emoji
+ctrl + shift + e
+  rofi -modi emoji -show emoji
+
+# screenshot 
+ctrl + shift + p
+	sh $HOME/.config/rofi/rofi-screenshot.sh
+
+
+## alt commands
+
+# clipboard history
 alt + v
-    CM_LAUNCHER=rofi calc \
-        -location 1 \
-        -m -3 \  
-        -theme-str '* \{ font: 10px; \}' \
-        -theme-str 'listview \{ spacing: 0; \}' \
-        -theme-str 'window \{ width: 20em; \}'
+  rofi-gpaste
 
 
-# program launcher
-super + @space
-	sh $HOME/.config/rofi/bin/screenshot
-
-ctrl + @space
-  rofi -show drun
+# Custom ends here -----
 
 alt + {_,shift + }<F4>
   bspc node -{c,k}
@@ -94,11 +119,11 @@ super + {_,shift + }{h,j,k,l}
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
-alt + Tab
+super + c
   bspc node -f @brother
 
 # focus the next/previous window in the current desktop
-super + {_,shift + }c
+alt + {_,shift + }Tab
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
