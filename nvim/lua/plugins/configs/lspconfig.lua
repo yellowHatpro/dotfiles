@@ -86,4 +86,15 @@ require("lspconfig").rust_analyzer.setup{
   }
 }
 
+require("lspconfig").tsserver.setup{}
+
+require("lspconfig").tailwindcss.setup{}
+
+require("lspconfig").html.setup{}
+
+require("lspconfig").cadence.setup{
+  cmd = {"flow", "cadence", "language-server"},
+  filetypes = {"cdc"},
+}
+
 return M

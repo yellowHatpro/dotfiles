@@ -18,3 +18,7 @@ vlc/
 PDFMixTool/
 pavucontrol.ini
 QtProject.conf
+ranger/*.py
+create-next-app-nodejs/ 
+nextjs-nodejs/ 
+flow-cli/ 

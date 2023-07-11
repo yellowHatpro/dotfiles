@@ -48,7 +48,24 @@ local plugins = {
       require("better_escape").setup()
     end,
   },
-
+  {
+        'barrett-ruth/live-server.nvim',
+        build = 'yarn global add live-server',
+    
+    lazy = false,
+        config = true
+    },
+    {
+	    'xeluxee/competitest.nvim',
+     lazy=false,
+	    dependencies = 'MunifTanjim/nui.nvim',
+	    config = function() require('competitest').setup()
+      end,
+    },
+    {
+    "bjartek/nvim-cadence",
+  }
+   
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
