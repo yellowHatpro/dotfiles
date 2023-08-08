@@ -5,7 +5,7 @@ window:
   class:
     instance: Alacritty
     general: Alacritty
-  opacity: 0.8
+  opacity: 0.85
 
 font:
   normal:
@@ -23,7 +23,7 @@ font:
   bold_italic:
     family: FiraCode Nerd Font Mono
     style: Bold Italic
-  size: 10.0
+  size: 8.5
 
 scrolling:
   history: 10000
@@ -35,7 +35,7 @@ import:
   - ~/.config/alacritty/catppuccin-mocha.yml
 
 selection:
-  save_to_clipboard: false
+  save_to_clipboard: true
 
 shell:
   program: /usr/bin/zsh
