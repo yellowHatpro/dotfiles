@@ -97,4 +97,6 @@ require("lspconfig").cadence.setup{
   filetypes = {"cdc"},
 }
 
+require("lspconfig").solidity_ls.setup{}
+
 return M
