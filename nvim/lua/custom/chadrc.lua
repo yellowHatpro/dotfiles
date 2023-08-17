@@ -6,11 +6,13 @@ local highlights = require "custom.highlights"
 
 M.ui = {
   theme = "catppuccin",
-  theme_toggle = { "catppuccin", "catppuccin" },
-
   hl_override = highlights.override,
   hl_add = highlights.add,
   transparency = true,
+  statusline = {
+    theme = "minimal",
+    separator_style="round"
+  },
 }
 
 M.plugins = "custom.plugins"
