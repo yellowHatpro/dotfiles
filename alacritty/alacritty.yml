@@ -5,23 +5,23 @@ window:
   class:
     instance: Alacritty
     general: Alacritty
-  opacity: 0.85
+  opacity: 0.95
 
 font:
   normal:
-    family: FiraCode Nerd Font Mono
+    family: JetBrainsMono Nerd Font 
     style: Regular
 
   bold:
-    family: FiraCode Nerd Font Mono
+    family: JetBrainsMono Nerd Font 
     style: Bold
 
   italic:
-    family: FiraCode Nerd Font Mono
+    family: JetBrainsMono Nerd Font 
     style: Italic
 
   bold_italic:
-    family: FiraCode Nerd Font Mono
+    family: JetBrainsMono Nerd Font 
     style: Bold Italic
   size: 8.5
 
@@ -33,6 +33,9 @@ draw_bold_text_with_bright_colors: false
 
 import:
   - ~/.config/alacritty/catppuccin-mocha.yml
+
+env:
+  TERM: xterm-256color
 
 selection:
   save_to_clipboard: true
