@@ -10,11 +10,14 @@ F2
 F3
   brightnessctl set +40
 
+F12
+  betterlockscreen -l
+
 ## super commands
 
 # terminal emulator
 super + Return
-	firefox	
+	chromium	
 
 # rofi-wifi
 super + q 
@@ -48,7 +51,7 @@ ctrl + shift + h
 
 # show emoji
 ctrl + shift + e
-  rofi -modi emoji -show emoji
+  splatmoji copy
 
 # screenshot 
 ctrl + shift + p
