@@ -5,8 +5,9 @@ local plugins = {
 
   -- Override plugin definition options
   {
-    
-    {"wakatime/vim-wakatime", 
+
+    {
+      "wakatime/vim-wakatime",
       lazy = false
     },
     "neovim/nvim-lspconfig",
@@ -49,23 +50,33 @@ local plugins = {
     end,
   },
   {
-        'barrett-ruth/live-server.nvim',
-        build = 'yarn global add live-server',
-    
+    'barrett-ruth/live-server.nvim',
+    build = 'yarn global add live-server',
+
     lazy = false,
-        config = true
-    },
-    {
-	    'xeluxee/competitest.nvim',
-     lazy=false,
-	    dependencies = 'MunifTanjim/nui.nvim',
-	    config = function() require('competitest').setup()
-      end,
-    },
-    {
+    config = true
+  },
+  {
+    'xeluxee/competitest.nvim',
+    lazy = false,
+    dependencies = 'MunifTanjim/nui.nvim',
+    config = function()
+      require('competitest').setup()
+    end,
+  },
+  {
     "bjartek/nvim-cadence",
+  },
+  {
+    "saecki/crates.nvim",
+    ft = { "rust", "toml" },
+    config = function(_, opts)
+      local crates = require('crates')
+      crates.setup(opts)
+      crates.show()
+    end,
   }
-   
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

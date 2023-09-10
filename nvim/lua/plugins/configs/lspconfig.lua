@@ -63,11 +63,11 @@ require("lspconfig").lua_ls.setup {
   },
 }
 
-require("lspconfig").clangd.setup{
+require("lspconfig").clangd.setup {
   on_attach = M.on_attach,
   capabilities = M.capabilities,
-  cmd = {"clangd"},
-  filetypes = {"c","cpp"},
+  cmd = { "clangd" },
+  filetypes = { "c", "cpp" },
   root_pattern = {
     '.clangd',
     '.git'
@@ -75,27 +75,47 @@ require("lspconfig").clangd.setup{
   single_file_support = true
 }
 
-require'lspconfig'.pylsp.setup{}
+require 'lspconfig'.pylsp.setup {}
 
-require("lspconfig").rust_analyzer.setup{
+require("lspconfig").rust_analyzer.setup {
   setting = {
     ['rust-analyzer'] = {
+      cargo = {
+        allFeatures = true,
+      },
       enable = false
     }
   }
 }
 
-require("lspconfig").tsserver.setup{}
+require("lspconfig").tsserver.setup {}
 
-require("lspconfig").tailwindcss.setup{}
+require("lspconfig").tailwindcss.setup {}
 
-require("lspconfig").html.setup{}
+require("lspconfig").html.setup {}
 
-require("lspconfig").cadence.setup{
-  cmd = {"flow", "cadence", "language-server"},
-  filetypes = {"cdc"},
+require("lspconfig").cadence.setup {
+  cmd = { "flow", "cadence", "language-server" },
+  filetypes = { "cdc" },
 }
 
-require("lspconfig").solidity_ls.setup{}
+require("lspconfig").solidity_ls.setup {}
+
+require("lspconfig").gopls.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+  cmd = { "gopls" },
+  filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  root_dir = require("lspconfig/util").root_pattern("go.work", "go.mod", ".git"),
+  settings = {
+    gopls = {
+      completeUnimported = true,
+      usePlaceholders = true,
+      analyses = {
+        unusedparams = true,
+      }
+    }
+  }
+}
 
 return M
