@@ -108,7 +108,7 @@ M.comment = {
   -- toggle comment in both modes
   n = {
     -- diagnostics
-    ["<leader>do"] = { "<cmd> lua vim.diagnostic.open_float()<CR>", opts =  { noremap = true }},
+    ["<leader>do"] = { "<cmd> lua vim.diagnostic.open_float()<CR>", opts = { noremap = true } },
     ["<leader>/"] = {
       function()
         require("Comment.api").toggle.linewise.current()

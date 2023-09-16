@@ -77,17 +77,6 @@ require("lspconfig").clangd.setup {
 
 require 'lspconfig'.pylsp.setup {}
 
-require("lspconfig").rust_analyzer.setup {
-  setting = {
-    ['rust-analyzer'] = {
-      cargo = {
-        allFeatures = true,
-      },
-      enable = false
-    }
-  }
-}
-
 require("lspconfig").tsserver.setup {}
 
 require("lspconfig").tailwindcss.setup {}
@@ -100,6 +89,8 @@ require("lspconfig").cadence.setup {
 }
 
 require("lspconfig").solidity_ls.setup {}
+
+require("lspconfig").jdtls.setup {}
 
 require("lspconfig").gopls.setup {
   on_attach = M.on_attach,
