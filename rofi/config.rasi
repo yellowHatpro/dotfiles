@@ -9,9 +9,9 @@ configuration{
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
-    display-drun: "   Apps ";
-    display-run: "   Run ";
-    display-window: " 﩯  window";
+    display-drun: " 🔍 Apps ";
+    display-run: " 🚀  Run ";
+    display-window: " 🐼  window";
     display-Network: " 󰤨  Network";
     sidebar-mode: true;
 }
